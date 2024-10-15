@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madlibs</title>
+  </head>
+  <body>
+    <h1>Madlibs!</h1>
+    {% block content %}
+    <form action="/questions">
+      <label for="templates">Choose a Story!</label>
+      <select name="story_id" id="templates">
+        <option value="0">--select--</option>
+        {% for story in stories %}
+        <option value="{{story.id}}">{{story.id}}</option>
+        {% endfor %}
+      </select>
+
+      <button>Submit!</button>
+    </form>
+    {% endblock %}
+  </body>
+</html>

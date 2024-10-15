@@ -1,0 +1,14 @@
+{% extends 'home.html' %}
+<!-- CONTENT -->
+{% block content %}
+<!-- CHECKS TEMPLATE -->
+<form action="/story">
+  {% for prompt in prompts %}
+  <label for="{{story_id}}">{{prompt}}:</label>
+  <input type="text" name="{{prompt}}" id="{{story_id}}" />
+  <br />
+  {% endfor %}
+  <input type="hidden" name="story_id" value="{{story_id}}" />
+  <button>Submit!</button>
+</form>
+{% endblock %}
