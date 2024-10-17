@@ -2,7 +2,7 @@
 <!-- CONTENT -->
 {% block content %}
 <!-- CHECKS TEMPLATE -->
-<form action="/story">
+<form action="/story" id="story_form">
   {% for prompt in prompts %}
   <label for="{{story_id}}">{{prompt}}:</label>
   <input type="text" name="{{prompt}}" id="{{story_id}}" />

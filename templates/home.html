@@ -3,13 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/style.css" />
+
+    <!-- h1 font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap"
+      rel="stylesheet"
+    />
+    <!-- genreal font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Madlibs</title>
   </head>
   <body>
     <h1>Madlibs!</h1>
     {% block content %}
-    <form action="/questions">
-      <label for="templates">Choose a Story!</label>
+    <form action="/questions" id="home_form">
+      <label for="templates">Choose a Story: </label>
       <select name="story_id" id="templates">
         <option value="0">--select--</option>
         {% for story in stories %}
